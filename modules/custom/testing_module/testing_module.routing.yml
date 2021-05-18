@@ -1,0 +1,7 @@
+testing_module.form:
+  path: '/testing-form'
+  defaults:
+    _title: 'Student  form'
+    _form: '\Drupal\testing_module\Form\TestingModule'
+  requirements:
+    _permission: 'access content'

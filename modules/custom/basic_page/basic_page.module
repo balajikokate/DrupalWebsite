@@ -1,0 +1,13 @@
+<?php
+
+   function basic_page_theme($existing, $type, $theme, $path) {
+     return [
+      'info-page' => [
+      'variables' => [
+          'items'=>NULL,
+          ],
+    ],
+  ];
+}
+
+?>
