@@ -1,0 +1,7 @@
+mymodule.contentPage:
+  path: '/content-page'
+  defaults:
+    _controller: '\Drupal\mymodule\Controller\FirstController::contentPage'
+    _title: 'Custom Page'
+  requirements:
+    _permission: 'access content'

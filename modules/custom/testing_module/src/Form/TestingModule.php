@@ -54,7 +54,7 @@ class TestingModule extends FormBase {
     // ];
     $form['about_student']= array(
       '#type'=>'textarea',
-      '#title'=>"About Employee",
+      '#title'=>"About Student",
       '#default_value'=>"",
       '#required'=>TRUE
     );
@@ -63,7 +63,7 @@ class TestingModule extends FormBase {
     
     $form['save'] = array(
       '#type' => 'submit',
-      '#value' => 'Save Employee',
+      '#value' => 'Save Student',
       '#button_type' => 'primary',
     );
     return $form;

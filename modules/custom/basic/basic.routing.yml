@@ -1,0 +1,7 @@
+basic.content:
+  path: '/basic'
+  defaults:
+    _controller: '\Drupal\basic\Controller\BasicController::content'
+    _title: 'Hello Drupal'
+  requirements:
+    _permission: 'access content'

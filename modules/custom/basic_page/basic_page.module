@@ -9,5 +9,8 @@
     ],
   ];
 }
+function basic_page_page_attachments(array &$page){
+  $page['#attached']['library'][]= 'basic_page/basic_page_css';
+}
 
 ?>

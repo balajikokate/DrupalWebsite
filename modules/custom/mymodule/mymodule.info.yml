@@ -1,0 +1,5 @@
+name: Custom Module
+type: module
+core: 8.x
+description: This module is for overwriting existing module
+package: custom
