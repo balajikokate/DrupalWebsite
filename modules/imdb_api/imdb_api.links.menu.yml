@@ -1,0 +1,5 @@
+imdb_api.imdb_api_config_form:
+  title: 'IMDB API'
+  route_name: imdb_api.imdb_api_config_form
+  description: 'IMDB API configs.'
+  parent: system.admin_config_system

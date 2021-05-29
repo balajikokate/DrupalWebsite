@@ -1,5 +1,0 @@
-basic_css:
-  version: 1.x
-  css:
-    theme:
-      css/basic.css: {}

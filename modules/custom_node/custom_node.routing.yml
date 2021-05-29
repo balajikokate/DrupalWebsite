@@ -1,0 +1,7 @@
+custom_node.showContent:
+  path: '/node-page'
+  defaults:
+    _controller: '\Drupal\custom_node\Controller\CustomNode::showContent'
+    _title: 'node Page'
+  requirements:
+    _permission: 'access content'

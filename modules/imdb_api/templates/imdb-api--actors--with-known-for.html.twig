@@ -1,0 +1,20 @@
+{% extends "@imdb_api/imdb-api--actors.html.twig" %}
+
+{% block actor %}
+  {{ parent() }}
+{% endblock actor %}
+
+{% block actor_known_for %}
+  <div class="actor__known-for">
+    {% for item in actor.known_for %}
+
+      <div class="actor__known-for__item">
+        <div class="actor__known-for__image">{{ item.image|imdb_item_image('thumbnail') }}</div>
+        <div class="actor__known-for__info">
+          <div class="actor__known-for__title">{{ "%s (%s)" | format(item.title, item.year) }}</div>
+          <div class="actor__known-for__character">{{ item.characters|join(', ') }}</div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock actor_known_for %}

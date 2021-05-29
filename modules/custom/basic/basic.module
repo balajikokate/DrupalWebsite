@@ -1,5 +1,0 @@
-<?php
-  
-  function basic_page_attachments(array &$page){
-      $page['#attached'] ['library'] [] = 'basic/basic_css';
-  }

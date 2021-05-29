@@ -1,0 +1,4 @@
+name: Custom node
+type: module
+core: 8.x
+description: Thid module is for custom node creation

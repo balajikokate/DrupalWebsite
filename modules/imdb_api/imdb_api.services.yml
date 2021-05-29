@@ -1,0 +1,26 @@
+services:
+  logger.channel.imdb_api:
+    parent: logger.channel_base
+    arguments: ['imdb_api']
+  imdb_api.imdb_api:
+    class: Drupal\imdb_api\ImdbApiService
+    arguments: ['@http_client', '@config.factory', '@logger.channel.imdb_api']
+  plugin.manager.imdb_items_list.actor:
+    class: Drupal\imdb_api\Plugin\ImdbItemsListManager
+    arguments: [actor, '@container.namespaces', '@cache.discovery', '@module_handler']
+  plugin.manager.imdb_items_list.movie:
+    class: Drupal\imdb_api\Plugin\ImdbItemsListManager
+    arguments: [movie, '@container.namespaces', '@cache.discovery', '@module_handler']
+  plugin.manager.imdb_items_list.tv_show:
+    class: Drupal\imdb_api\Plugin\ImdbItemsListManager
+    arguments: [tv_show, '@container.namespaces', '@cache.discovery', '@module_handler']
+  cache_context.imdb_api_date:
+    class: Drupal\imdb_api\CacheContext\DateCacheContext
+    arguments: []
+    tags:
+      - { name: cache.context }
+  imdb_api.twig.imdb_item_image_extension:
+    class: Drupal\imdb_api\Twig\Extension\ImdbItemImage
+    arguments: ['@module_handler']
+    tags:
+      - { name: twig.extension }

@@ -1,0 +1,4 @@
+name: Cat facts module
+core: 8.x
+type: module
+description: Thid module is forcat facts

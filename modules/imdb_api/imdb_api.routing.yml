@@ -1,0 +1,23 @@
+imdb_api.imdb_api_config_form:
+  path: '/admin/config/imdb-api/config'
+  defaults:
+    _form: '\Drupal\imdb_api\Form\ImdbApiConfigForm'
+    _title: 'ImdbApiConfigForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+imdb_api.imdb_api_item_dialog:
+  path: '/imdb-api/item/dialog'
+  defaults:
+    _form: '\Drupal\imdb_api\Form\ImdbApiItemDialog'
+    _title: 'ImdbApiItemDialog'
+  requirements:
+    _access: 'TRUE'
+imdb_api.episode_form:
+  path: '/imdb_api/episode/dialog'
+  defaults:
+    _form: '\Drupal\imdb_api\Form\EpisodeForm'
+    _title: 'EpisodeForm'
+  requirements:
+    _access: 'TRUE'

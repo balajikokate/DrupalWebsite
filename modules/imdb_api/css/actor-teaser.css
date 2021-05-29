@@ -1,0 +1,14 @@
+.actor, .actor__known-for__item {
+  overflow: auto;
+}
+.actor__image, .actor__known-for__image {
+  float: left;
+  padding-right: 10px;
+}
+.actor__info {
+  text-align: justify;
+}
+.actor__known-for__item {
+  display: inline-block;
+  width: 24%;
+}

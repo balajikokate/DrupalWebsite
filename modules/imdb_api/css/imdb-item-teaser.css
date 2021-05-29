@@ -1,0 +1,10 @@
+.imdb-item {
+  overflow: auto;
+}
+.imdb-item__image {
+  float: left;
+  padding-right: 10px;
+}
+.imdb-item__info {
+  text-align: justify;
+}

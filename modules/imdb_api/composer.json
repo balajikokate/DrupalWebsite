@@ -1,0 +1,22 @@
+{
+    "name": "drupal/imdb_api",
+    "type": "drupal-module",
+    "description": "IMDB API",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/imdb_api",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/imdb_api",
+        "source": "http://cgit.drupalcode.org/imdb_api"
+    },
+    "authors": [
+        {
+            "name": "Bohdan Khandruk",
+            "homepage": "https://www.drupal.org/u/rocketman"
+        }
+    ],
+    "require": {
+        "bohdankhandruk/imdb_php_sdk": "dev-main#cf068cbc998b8afdafe9495e00ad6a265088ed33"
+    }
+}

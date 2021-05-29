@@ -1,0 +1,19 @@
+imdb_item.teaser:
+  css:
+    theme:
+      css/imdb-item-teaser.css: {}
+actor.teaser:
+  css:
+    theme:
+      css/actor-teaser.css: {}
+
+imdb_api.episode.ajax:
+  js:
+    js/episode.ajax.js: {}
+  dependencies:
+    - core/drupal.ajax
+imdb_api.episode.widget:
+  js:
+    js/episode.widget.js: {}
+  dependencies:
+    - imdb_api/imdb_api.episode.ajax

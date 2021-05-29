@@ -1,0 +1,30 @@
+<?php
+
+/**function pagemodule_form_alter(&$form,\Drupal\Core\Form\FormStateInterface $form_state, $form_id ){
+    drupal_set_message($form_id);
+    if($form_id == 'node_page_form'){
+    $form['title']['#title']['#value'] =t('New Form Title');
+    $form['terms_of_use'] = array(
+    '#type' => 'checkbox',
+    '#title' => t("I agree with the website's terms and conditions."),
+    '#required' => TRUE,
+  );
+    }
+}*/
+
+function hook_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
+
+  // Insert the new entity into a fictional table of all entities.
+  \Drupal::database()
+    ->insert('example_entity')
+    ->fields([
+    'type' => $entity
+      ->getEntityTypeId(),
+    'id' => $entity
+      ->id(),
+    'created' => REQUEST_TIME,
+    'updated' => REQUEST_TIME,
+  ])
+    ->execute();
+}
+?>

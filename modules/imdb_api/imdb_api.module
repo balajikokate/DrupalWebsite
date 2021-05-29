@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @file
+ * Contains imdb_api.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function imdb_api_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the imdb_api module.
+    case 'help.page.imdb_api':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('IMDB API') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function imdb_api_theme($existing, $type, $theme, $path) {
+  return [
+    'imdb_item__teaser' => [
+      'variables' => [
+        'image' => NULL,
+        'title' => NULL,
+        'description' => NULL,
+      ],
+    ],
+    'imdb_api__actors' => [
+      'variables' => [
+        'actors' => NULL,
+      ],
+    ],
+    'imdb_api__actors__with_known_for' => [
+      'variables' => [
+        'actors' => NULL,
+      ],
+    ],
+    'coming_soon_movies' => [
+      'variables' => [
+        'content' => NULL,
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}

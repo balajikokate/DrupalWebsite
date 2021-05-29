@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the external_entities module.
+ */
+
+/**
+ * Create the database schema for external entity types.
+ */
+function external_entities_update_8201() {
+  // Prior to https://www.drupal.org/project/external_entities/issues/3056426
+  // the database schema for external entity types was not created. This update
+  // script creates the database schema for all existing external entity types.
+  $external_entity_type_config = \Drupal::entityTypeManager()->getDefinition('external_entity_type');
+
+  $external_entity_types = \Drupal::entityTypeManager()->createHandlerInstance(
+    $external_entity_type_config->getHandlerClass('storage'),
+    $external_entity_type_config
+  )->loadMultiple();
+
+  foreach ($external_entity_types as $id => $entity_type) {
+    $entity_type = \Drupal::entityTypeManager()->getDefinition($id);
+    \Drupal::service('entity_type.listener')
+      ->onEntityTypeCreate($entity_type);
+  }
+}

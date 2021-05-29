@@ -1,0 +1,4 @@
+name: Basic module
+type: module
+core: 8.x
+description: This is basic module

@@ -1,0 +1,4 @@
+name: Custom Block
+type: module
+core: 8.x
+description: This module is for custom block

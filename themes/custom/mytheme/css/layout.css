@@ -1,0 +1,67 @@
+.layout-container{
+   background-color:floralwhite;
+   /* background: url("../sing1.jpg"); */
+
+}
+/* #block-mytheme-content{
+    margin-right: 20%;
+    margin-left:20%;
+    
+   display: block;
+   justify-content: center;
+    border: 1px solid black;
+   
+} */
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+   }
+.header .region {
+    padding: 5px;
+   }
+.header .region-branding {
+    flex: 0 1 20%;
+   }
+.header .region-navigation {
+    flex: 0 1 50%;
+   }
+.header .region-search {
+    flex: 0 1 10%;
+   }
+.region .block-region {
+    padding: 15px;
+   }
+.featured .region{
+   padding: 40px 20px;
+   background-color: indianred;
+   }
+.main{
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+   }
+.main .content{
+    flex:0 1  80% ;
+}
+   
+   
+.main .right--sidebar {
+    flex: 0 1 20%;
+   }
+
+.footer--top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+   }
+   
+   
+   .footer--top .region {
+    padding: 5px;
+   }
+   
+   
+   .region-footer-first, .region-footer-second, .region-footer-third {
+    flex: 0 1 30%;
+   }

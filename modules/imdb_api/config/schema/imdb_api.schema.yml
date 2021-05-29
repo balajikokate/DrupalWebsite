@@ -1,0 +1,20 @@
+field.widget.settings.imdb_item:
+  type: mapping
+  label: 'IMDB Item widget settings'
+  mapping:
+    size:
+      type: integer
+      label: 'Size'
+    placeholder:
+      type: textfield
+      label: 'Placeholder'
+field.formatter.settings.imdb_item:
+  type: mapping
+  label: 'IMDB Item formatter settings'
+  mapping:
+    view_mode:
+      type: string
+      label: 'View mode'
+    image_style:
+      type: string
+      label: 'Image style'

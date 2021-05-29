@@ -1,0 +1,21 @@
+{% block actors %}
+  <div class="actors">
+    {% for actor in actors %}
+      {% block actor %}
+        <div class="actor">
+          <div class="actor__image">{{ actor.image|imdb_item_image('medium') }}</div>
+          <div class="actor__info">
+            <div class="actor__name-info">
+              <span class="actor__name">{{ actor.entity.getName }}</span>
+              <span class="actor__akas-title">Also know as:</span>
+              <span class="actor__akas">{{ actor.entity.getAkas|join(', ') }}</span>
+            </div>
+            <div class="actor__jobs">{{ actor.entity.getInterestingJobs|join(', ') }}</div>
+            <div class="actor__mini-bio">{{ actor.entity.getMiniBios.0.text }}</div>
+          </div>
+        </div>
+      {% endblock actor %}
+      {% block actor_known_for %}{% endblock actor_known_for %}
+    {% endfor %}
+  </div>
+{% endblock actors %}

@@ -1,0 +1,23 @@
+name: My First Theme
+type: theme
+description: This is my First theme
+core: 8.x
+screenshot: screenshot.png
+base theme: classy
+
+
+regions:
+  branding: Branding
+  navigation: Main navigation
+  search: Search
+  featured: Featured
+  content: Content
+  right_sidebar: Right sidebar
+  footer_first: Footer First
+  footer_second: Footer Second
+  footer_third: Footer Third
+  footer_bottom: Footer Bottom
+  
+
+libraries:
+  - mytheme/global-css

@@ -1,0 +1,4 @@
+name: Page Module
+type: module
+core: 8.x
+description: this module i m using to alter basic page form

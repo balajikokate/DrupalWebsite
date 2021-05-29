@@ -1,0 +1,46 @@
+<?php
+    function pagemodule_schema(){
+        $schema['pagemoduledb'] = [
+            'fields'=>[
+                'id'=>[
+                    'description'=>'employee id',
+                    'type'=>'serial',
+                    'not null'=>TRUE
+                ],
+                'name'=>[
+                    'type'=>'varchar',
+                    'length'=>30,
+                    'not null'=>TRUE
+                ],
+                'email'=>[
+                    'type'=>'varchar',
+                    'length'=>50,
+                    'not null'=>TRUE
+                ],
+                'gender'=>[
+                    'type'=>'varchar',
+                    'length'=>50,
+                    'not null'=>TRUE
+                ],
+                'about_employee'=>[
+                    'type'=>'varchar',
+                    'length'=>50,
+                    'not null'=>TRUE
+                ],
+                'create_date'=>[
+                    'mysql_type'=>'timestamp',
+                    
+                    'not null'=>TRUE
+                ]
+            ],
+                'primary key'=>['id'],
+                    'indexes'=>[
+                        'id'=>['id'],
+                        'name'=>['name']
+                    ]
+                    
+                ];
+
+            return $schema;
+        
+    }

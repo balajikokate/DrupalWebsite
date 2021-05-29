@@ -5,7 +5,19 @@
 function mymodule_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state,$form_id){
     if($form_id == 'comment_comment_form'){
         $form['actions']['submit']['#value'] = t('comment');
+        $form['field_message'] = array(
+         '#type' => 'item',
+         '#title' => t('New article'),
+        '#markup' => t('You are about to create a new article'),
+        );
+      $form['terms_of_use'] = array(
+     '#type' => 'checkbox',
+     '#title' => t("I agree with the website's terms and conditions."),
+     '#required' => TRUE,
+  );
+
     }
+    
 }
 
 ?>
